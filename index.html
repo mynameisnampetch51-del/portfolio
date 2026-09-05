@@ -2,26 +2,110 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nampetch Sutheesuntornkul</title>
+  <style>
+    :root {
+      --bg: #FFFFFF; --surface: #FFFFFF; --surface-2: #FFF3F3;
+      --ink: #201415; --ink-muted: #8C6F70;
+      --line: #F3D9D9; --line-strong: #E7B9B9;
+      --accent: #D81E23; --accent-strong: #A9151A; --accent-soft: #FBD9D9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #150C0C; --surface: #1F1414; --surface-2: #261818;
+        --ink: #F5E9E9; --ink-muted: #B08C8C;
+        --line: #3A2424; --line-strong: #4A2E2E;
+        --accent: #FF4B4F; --accent-strong: #FF7276; --accent-soft: #3D1A1A;
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: 'var(--bg)', surface: 'var(--surface)', 'surface-2': 'var(--surface-2)',
+            ink: 'var(--ink)', 'ink-muted': 'var(--ink-muted)',
+            line: 'var(--line)', 'line-strong': 'var(--line-strong)',
+            accent: 'var(--accent)', 'accent-strong': 'var(--accent-strong)', 'accent-soft': 'var(--accent-soft)',
+          },
+          fontFamily: {
+            display: ['Georgia', '"Iowan Old Style"', '"Times New Roman"', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
+<body class="bg-bg text-ink antialiased min-h-screen">
+  <div class="max-w-2xl mx-auto px-5 py-14">
 
-<header>
-    <h1>Nampetch Sutheesuntornkul</h1>
-</header>
-<section id="about">
-    <h2>About Me</h2>
-    <p></p>
-</section>
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="project1.html">Project 1</a></li>
-        <li><a href="project2.html">Project 2</a></li>
-        <li><a href="project3.html">Project 3</a></li>
-    </ul>
-</section>
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mynameisnampetch51@gmail.com">mynameisnampetch51@gmail.com</a></p>
-</section>
+    <header class="mb-10">
+      <h1 class="font-display text-3xl font-semibold mb-2">Nampetch Sutheesuntornkul</h1>
+      <p class="text-ink-muted leading-relaxed">
+        นักเรียนที่สนใจ cyber security — เรียนรู้ผ่านการลงมือสร้างเครื่องมือด้านความปลอดภัยด้วยตัวเอง
+        ตั้งแต่ heuristic detection ไปจนถึง ML classifier พร้อมพื้นฐาน software engineering ทั่วไปที่ใช้สร้างมันขึ้นมา
+      </p>
+    </header>
+
+    <section id="projects" class="mb-12">
+      <h2 class="text-sm font-semibold text-ink-muted uppercase tracking-wide mb-4">Projects</h2>
+      <div class="flex flex-col gap-4">
+
+        <a href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank"
+           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
+          <h3 class="font-display text-lg font-semibold mb-1">Phishing URL Detector</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            ตรวจลิงก์ที่น่าสงสัยแบบหลายชั้น เลียนแบบระบบจริงอย่าง Google Safe Browsing:
+            heuristic 8 ข้อรันในเบราว์เซอร์ล้วน (IP-as-hostname, typosquatting, URL shortener ฯลฯ)
+            เสริมด้วย ML classifier (LogisticRegression เทรนจาก UCI PhiUSIIL dataset 235,795 URL)
+            ผ่าน backend API ที่แกะเนื้อหาหน้าเว็บจริงมาเช็ค
+          </p>
+          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
+        </a>
+
+        <a href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank"
+           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
+          <h3 class="font-display text-lg font-semibold mb-1">Password Strength Checker</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            เช็คความแข็งแรงของรหัสผ่านแบบเรียลไทม์ — ประเมิน entropy จริง ไม่ใช่แค่นับความยาว
+            เตือนรูปแบบที่เดาง่าย (คำในดิกชันนารี, keyboard pattern, วันเกิด) ทำงานในเบราว์เซอร์ล้วน
+            ไม่ส่งรหัสผ่านไปที่ไหนเลย
+          </p>
+          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
+        </a>
+
+        <a href="https://mynameisnampetch51-del.github.io/cube/" target="_blank"
+           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
+          <h3 class="font-display text-lg font-semibold mb-1">Cube Net Visualizer</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            เครื่องมือ interactive สอนเรื่องโครงข่ายลูกบาศก์ (cube net) — วางแปลน วาดลาย
+            แล้วดูมันพับเป็นลูกบาศก์ 3 มิติด้วย CSS 3D transform ล้วน ไม่ใช้ WebGL/Three.js
+          </p>
+          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
+        </a>
+
+        <a href="https://mynameisnampetch51-del.github.io/to-do-list/" target="_blank"
+           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
+          <h3 class="font-display text-lg font-semibold mb-1">To-Do App</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            แอปจัดการงานพื้นฐาน — เพิ่ม/แก้/ลบ/ทำเครื่องหมายเสร็จ บันทึกข้อมูลด้วย localStorage
+          </p>
+          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="text-sm font-semibold text-ink-muted uppercase tracking-wide mb-3">Contact</h2>
+      <a href="mailto:mynameisnampetch51@gmail.com" class="text-accent-strong font-medium">
+        mynameisnampetch51@gmail.com
+      </a>
+    </section>
+
+  </div>
+</body>
+</html>
