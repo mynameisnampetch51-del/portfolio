@@ -43,6 +43,7 @@
   <div class="max-w-2xl mx-auto px-5 py-14">
 
     <header class="mb-10">
+      <button href="en.html" class="mb-10 text-right block text-sm font-medium text-accent-strong hover:text-accent-strong/80 transition-colors round-full">thai</button>
       <h1 class="font-display text-3xl font-semibold mb-2">Nampetch Sutheesuntornkul</h1>
       <p class="text-ink-muted leading-relaxed">
         นักเรียนที่สนใจ cyber security — เรียนรู้ผ่านการลงมือสร้างเครื่องมือด้านความปลอดภัยด้วยตัวเอง
@@ -70,9 +71,9 @@
            class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
           <h3 class="font-display text-lg font-semibold mb-1">Password Strength Checker</h3>
           <p class="text-sm text-ink-muted leading-relaxed">
-            เช็คความแข็งแรงของรหัสผ่านแบบเรียลไทม์ — ประเมิน entropy จริง ไม่ใช่แค่นับความยาว
-            เตือนรูปแบบที่เดาง่าย (คำในดิกชันนารี, keyboard pattern, วันเกิด) ทำงานในเบราว์เซอร์ล้วน
-            ไม่ส่งรหัสผ่านไปที่ไหนเลย
+            วัดความแข็งแรงของรหัสผ่านที่มีอยู่แล้วบนมาตรวัดเข็ม — ประเมินจาก entropy จริง
+            ไม่ใช่แค่นับความยาว จับรูปแบบที่เดาง่าย (รหัสยอดฮิต, ตัวอักษรซ้ำ/เรียงต่อเนื่อง,
+            คีย์บอร์ดแพทเทิร์น) ทำงานในเบราว์เซอร์ล้วน ไม่ส่งรหัสผ่านไปไหน
           </p>
           <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
         </a>
@@ -81,9 +82,9 @@
            class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
           <h3 class="font-display text-lg font-semibold mb-1">Password Forge</h3>
           <p class="text-sm text-ink-muted leading-relaxed">
-            สุ่มรหัสผ่านที่ปลอดภัยด้วย crypto.getRandomValues (ไม่ใช่ Math.random) พร้อม rejection
-            sampling กัน bias เลือกความยาวและชุดตัวอักษรได้ ดีไซน์แยกเป็นเอกลักษณ์ของตัวเอง
-            (ธีมเตาหลอม ตัวอักษรทยอย "ตี" ขึ้นทีละตัว) เชื่อมกับ Password Strength Checker
+            สุ่มรหัสผ่านใหม่ที่ปลอดภัยด้วย crypto.getRandomValues (ไม่ใช่ Math.random) พร้อม
+            rejection sampling กัน bias เลือกความยาวและชุดตัวอักษรเองได้ ตัวอักษรทยอยปั๊มขึ้นทีละตัว
+            แทนที่จะโผล่มาทันที เชื่อมกับ Password Strength Checker ผ่านแถบลิงก์ด้านบน
           </p>
           <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
         </a>
