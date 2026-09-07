@@ -1,114 +1,268 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nampetch Sutheesuntornkul</title>
-  <style>
-    :root {
-      --bg: #FFFFFF; --surface: #FFFFFF; --surface-2: #FFF3F3;
-      --ink: #201415; --ink-muted: #8C6F70;
-      --line: #F3D9D9; --line-strong: #E7B9B9;
-      --accent: #D81E23; --accent-strong: #A9151A; --accent-soft: #FBD9D9;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #150C0C; --surface: #1F1414; --surface-2: #261818;
-        --ink: #F5E9E9; --ink-muted: #B08C8C;
-        --line: #3A2424; --line-strong: #4A2E2E;
-        --accent: #FF4B4F; --accent-strong: #FF7276; --accent-soft: #3D1A1A;
-      }
-    }
-  </style>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: 'var(--bg)', surface: 'var(--surface)', 'surface-2': 'var(--surface-2)',
-            ink: 'var(--ink)', 'ink-muted': 'var(--ink-muted)',
-            line: 'var(--line)', 'line-strong': 'var(--line-strong)',
-            accent: 'var(--accent)', 'accent-strong': 'var(--accent-strong)', 'accent-soft': 'var(--accent-soft)',
-          },
-          fontFamily: {
-            display: ['Georgia', '"Iowan Old Style"', '"Times New Roman"', 'serif'],
-          },
-        },
-      },
-    };
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nampetch Sutheesuntornkul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EFEEE7;
+    --line: #D6D3C7;
+    --line-strong: #1B1912;
+    --ink: #1B1912;
+    --ink-dim: #6E6A5A;
+    --signal: #3F8358;
+    --signal-soft: rgba(63, 131, 88, 0.14);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans Thai", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 20px 72px;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 14px;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .lang-toggle {
+    flex-shrink: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--ink-dim);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+
+  .lang-toggle:hover {
+    color: var(--ink);
+    border-color: var(--ink-dim);
+  }
+
+  .bio {
+    margin: 14px 0 0;
+    color: var(--ink-dim);
+    line-height: 1.75;
+    max-width: 54ch;
+  }
+
+  .section-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 56px 0 4px;
+  }
+
+  .services {
+    margin: 0;
+  }
+
+  .service-row {
+    display: block;
+    padding: 22px 2px;
+    border-top: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.15s ease;
+  }
+
+  .service-row:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .service-row:hover {
+    background: rgba(27, 25, 18, 0.03);
+  }
+
+  .service-top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 3px var(--signal-soft);
+    flex-shrink: 0;
+  }
+
+  .status-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--signal);
+  }
+
+  .service-name {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .service-desc {
+    margin: 10px 0 0;
+    color: var(--ink-dim);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .service-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--signal);
+  }
+
+  .service-row:hover .service-link {
+    text-decoration: underline;
+  }
+
+  .contact-row {
+    padding: 22px 2px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact-row a {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .contact-row a:hover {
+    color: var(--signal);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 2px;
+  }
+</style>
 </head>
-<body class="bg-bg text-ink antialiased min-h-screen">
-  <div class="max-w-2xl mx-auto px-5 py-14">
+<body>
+  <div class="page">
+    <div class="eyebrow">Session log · nampetch</div>
+    <div class="header-row">
+      <h1>Nampetch Sutheesuntornkul</h1>
+      <a class="lang-toggle" href="en.html">EN</a>
+    </div>
+    <p class="bio">
+      นักเรียนที่สนใจ cyber security — เรียนรู้ผ่านการลงมือสร้างเครื่องมือด้านความปลอดภัยด้วยตัวเอง
+      ตั้งแต่ heuristic detection ไปจนถึง ML classifier พร้อมพื้นฐาน software engineering ทั่วไปที่ใช้สร้างมันขึ้นมา
+    </p>
 
-    <header class="mb-10">
-      <button href="en.html" class="mb-10 text-right block text-sm font-medium text-accent-strong hover:text-accent-strong/80 transition-colors round-full">thai</button>
-      <h1 class="font-display text-3xl font-semibold mb-2">Nampetch Sutheesuntornkul</h1>
-      <p class="text-ink-muted leading-relaxed">
-        นักเรียนที่สนใจ cyber security — เรียนรู้ผ่านการลงมือสร้างเครื่องมือด้านความปลอดภัยด้วยตัวเอง
-        ตั้งแต่ heuristic detection ไปจนถึง ML classifier พร้อมพื้นฐาน software engineering ทั่วไปที่ใช้สร้างมันขึ้นมา
-      </p>
-    </header>
+    <p class="section-label">Systems monitored</p>
+    <div class="services">
 
-    <section id="projects" class="mb-12">
-      <h2 class="text-sm font-semibold text-ink-muted uppercase tracking-wide mb-4">Projects</h2>
-      <div class="flex flex-col gap-4">
-
-        <a href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank"
-           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
-          <h3 class="font-display text-lg font-semibold mb-1">Phishing URL Detector</h3>
-          <p class="text-sm text-ink-muted leading-relaxed">
-            ตรวจลิงก์ที่น่าสงสัยแบบหลายชั้น เลียนแบบระบบจริงอย่าง Google Safe Browsing:
-            heuristic 8 ข้อรันในเบราว์เซอร์ล้วน (IP-as-hostname, typosquatting, URL shortener ฯลฯ)
-            เสริมด้วย ML classifier (LogisticRegression เทรนจาก UCI PhiUSIIL dataset 235,795 URL)
-            ผ่าน backend API ที่แกะเนื้อหาหน้าเว็บจริงมาเช็ค
-          </p>
-          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
-        </a>
-
-        <a href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank"
-           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
-          <h3 class="font-display text-lg font-semibold mb-1">Password Strength Checker</h3>
-          <p class="text-sm text-ink-muted leading-relaxed">
-            วัดความแข็งแรงของรหัสผ่านที่มีอยู่แล้วบนมาตรวัดเข็ม — ประเมินจาก entropy จริง
-            ไม่ใช่แค่นับความยาว จับรูปแบบที่เดาง่าย (รหัสยอดฮิต, ตัวอักษรซ้ำ/เรียงต่อเนื่อง,
-            คีย์บอร์ดแพทเทิร์น) ทำงานในเบราว์เซอร์ล้วน ไม่ส่งรหัสผ่านไปไหน
-          </p>
-          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
-        </a>
-
-        <a href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank"
-           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
-          <h3 class="font-display text-lg font-semibold mb-1">Password Forge</h3>
-          <p class="text-sm text-ink-muted leading-relaxed">
-            สุ่มรหัสผ่านใหม่ที่ปลอดภัยด้วย crypto.getRandomValues (ไม่ใช่ Math.random) พร้อม
-            rejection sampling กัน bias เลือกความยาวและชุดตัวอักษรเองได้ ตัวอักษรทยอยปั๊มขึ้นทีละตัว
-            แทนที่จะโผล่มาทันที เชื่อมกับ Password Strength Checker ผ่านแถบลิงก์ด้านบน
-          </p>
-          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
-        </a>
-
-        <a href="https://mynameisnampetch51-del.github.io/cube/" target="_blank"
-           class="block bg-surface border border-line rounded-2xl shadow-sm p-5 hover:border-accent-strong transition-colors">
-          <h3 class="font-display text-lg font-semibold mb-1">Cube Net Visualizer</h3>
-          <p class="text-sm text-ink-muted leading-relaxed">
-            เครื่องมือ interactive สอนเรื่องโครงข่ายลูกบาศก์ (cube net) — วางแปลน วาดลาย
-            แล้วดูมันพับเป็นลูกบาศก์ 3 มิติด้วย CSS 3D transform ล้วน ไม่ใช้ WebGL/Three.js
-          </p>
-          <span class="inline-block mt-3 text-sm font-semibold text-accent-strong">ดูโปรเจกต์ →</span>
-        </a>
-
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 class="text-sm font-semibold text-ink-muted uppercase tracking-wide mb-3">Contact</h2>
-      <a href="mailto:mynameisnampetch51@gmail.com" class="text-accent-strong font-medium">
-        mynameisnampetch51@gmail.com
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Phishing URL Detector</span>
+        </div>
+        <p class="service-desc">
+          ตรวจลิงก์ที่น่าสงสัยแบบหลายชั้น เลียนแบบระบบจริงอย่าง Google Safe Browsing:
+          heuristic 8 ข้อรันในเบราว์เซอร์ล้วน (IP-as-hostname, typosquatting, URL shortener ฯลฯ)
+          เสริมด้วย ML classifier (LogisticRegression เทรนจาก UCI PhiUSIIL dataset 235,795 URL)
+          ผ่าน backend API ที่แกะเนื้อหาหน้าเว็บจริงมาเช็ค
+        </p>
+        <span class="service-link">view project →</span>
       </a>
-    </section>
 
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Password Strength Checker</span>
+        </div>
+        <p class="service-desc">
+          วัดความแข็งแรงของรหัสผ่านที่มีอยู่แล้วบนมาตรวัดเข็ม — ประเมินจาก entropy จริง
+          ไม่ใช่แค่นับความยาว จับรูปแบบที่เดาง่าย (รหัสยอดฮิต, ตัวอักษรซ้ำ/เรียงต่อเนื่อง,
+          คีย์บอร์ดแพทเทิร์น) ทำงานในเบราว์เซอร์ล้วน ไม่ส่งรหัสผ่านไปไหน
+        </p>
+        <span class="service-link">view project →</span>
+      </a>
+
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Password Forge</span>
+        </div>
+        <p class="service-desc">
+          สุ่มรหัสผ่านใหม่ที่ปลอดภัยด้วย crypto.getRandomValues (ไม่ใช่ Math.random) พร้อม
+          rejection sampling กัน bias เลือกความยาวและชุดตัวอักษรเองได้ ตัวอักษรทยอยปั๊มขึ้นทีละตัว
+          แทนที่จะโผล่มาทันที เชื่อมกับ Password Strength Checker ผ่านแถบลิงก์ด้านบน
+        </p>
+        <span class="service-link">view project →</span>
+      </a>
+
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/cube/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Cube Net Visualizer</span>
+        </div>
+        <p class="service-desc">
+          เครื่องมือ interactive สอนเรื่องโครงข่ายลูกบาศก์ (cube net) — วางแปลน วาดลาย
+          แล้วดูมันพับเป็นลูกบาศก์ 3 มิติด้วย CSS 3D transform ล้วน ไม่ใช้ WebGL/Three.js
+        </p>
+        <span class="service-link">view project →</span>
+      </a>
+
+    </div>
+
+    <p class="section-label">Contact</p>
+    <div class="contact-row">
+      <a href="mailto:mynameisnampetch51@gmail.com">mynameisnampetch51@gmail.com</a>
+    </div>
   </div>
 </body>
 </html>
