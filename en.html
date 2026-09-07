@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nampetch Sutheesuntornkul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EFEEE7;
+    --line: #D6D3C7;
+    --line-strong: #1B1912;
+    --ink: #1B1912;
+    --ink-dim: #6E6A5A;
+    --signal: #3F8358;
+    --signal-soft: rgba(63, 131, 88, 0.14);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans Thai", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 20px 72px;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .lang-toggle {
+    flex-shrink: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--ink-dim);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+
+  .lang-toggle:hover {
+    color: var(--ink);
+    border-color: var(--ink-dim);
+  }
+
+  .bio {
+    margin: 14px 0 0;
+    color: var(--ink-dim);
+    line-height: 1.75;
+    max-width: 54ch;
+  }
+
+  .section-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 56px 0 4px;
+  }
+
+  .services {
+    margin: 0;
+  }
+
+  .service-row {
+    display: block;
+    padding: 22px 2px;
+    border-top: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.15s ease;
+  }
+
+  .service-row:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .service-row:hover {
+    background: rgba(27, 25, 18, 0.03);
+  }
+
+  .service-top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 3px var(--signal-soft);
+    flex-shrink: 0;
+  }
+
+  .status-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--signal);
+  }
+
+  .service-name {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .service-desc {
+    margin: 10px 0 0;
+    color: var(--ink-dim);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .service-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--signal);
+  }
+
+  .service-row:hover .service-link {
+    text-decoration: underline;
+  }
+
+  .contact-row {
+    padding: 22px 2px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact-row a {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .contact-row a:hover {
+    color: var(--signal);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-row">
+      <h1>Nampetch Sutheesuntornkul</h1>
+      <a class="lang-toggle" href="index.html">TH</a>
+    </div>
+    <p class="bio">
+      A student interested in cyber security — learning by building security tools from scratch,
+      from heuristic detection to ML classifiers, plus the general software engineering foundations used to build them.
+    </p>
+
+    <p class="section-label">Systems monitored</p>
+    <div class="services">
+
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Phishing URL Detector</span>
+        </div>
+        <p class="service-desc">
+          Multi-layer suspicious link checker, modeled on real systems like Google Safe Browsing:
+          8 heuristic rules run entirely in the browser (IP-as-hostname, typosquatting, URL
+          shorteners, etc.), backed by an ML classifier (logistic regression trained on the UCI
+          PhiUSIIL dataset, 235,795 URLs) via a backend API that fetches and inspects the real
+          page content.
+        </p>
+        <span class="service-link">view project →</span>
+      </a>
+
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Password Strength Checker</span>
+        </div>
+        <p class="service-desc">
+          Measures an existing password's strength on a needle gauge — scored from real entropy,
+          not just length. Flags easy-to-guess patterns (common passwords, repeated or sequential
+          characters, keyboard patterns). Runs entirely in the browser; the password never leaves it.
+        </p>
+        <span class="service-link">view project →</span>
+      </a>
+
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Password Forge</span>
+        </div>
+        <p class="service-desc">
+          Generates secure new passwords with crypto.getRandomValues (not Math.random), using
+          rejection sampling to avoid bias. Choose your own length and character set; each
+          character stamps in one at a time instead of appearing all at once. Linked to Password
+          Strength Checker via the top bar.
+        </p>
+        <span class="service-link">view project →</span>
+      </a>
+
+      <a class="service-row" href="https://mynameisnampetch51-del.github.io/cube/" target="_blank">
+        <div class="service-top">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-label">OPERATIONAL</span>
+          <span class="service-name">Cube Net Visualizer</span>
+        </div>
+        <p class="service-desc">
+          An interactive tool that teaches cube nets — lay out a pattern, draw on it, then watch
+          it fold into a 3D cube using pure CSS 3D transforms, no WebGL or Three.js.
+        </p>
+        <span class="service-link">view project →</span>
+      </a>
+
+    </div>
+
+    <p class="section-label">Contact</p>
+    <div class="contact-row">
+      <a href="mailto:mynameisnampetch51@gmail.com">mynameisnampetch51@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
