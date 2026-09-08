@@ -73,7 +73,7 @@
   .page-nav {
     display: flex;
     gap: 16px;
-    margin-top: 12px;
+    margin-bottom: 20px;
     font-family: "IBM Plex Mono", monospace;
     font-size: 12px;
   }
@@ -100,7 +100,12 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-dim);
-    margin: 56px 0 4px;
+    margin: 0 0 4px;
+  }
+
+  .section-break {
+    border-top: 2px solid var(--line-strong);
+    margin: 44px 0;
   }
 
   .services {
@@ -201,20 +206,22 @@
 <body>
   <div class="page">
     <header id="about">
-      <div class="header-row">
-        <h1>Nampetch Sutheesuntornkul</h1>
-        <a class="lang-toggle" href="index.html">TH</a>
-      </div>
       <nav class="page-nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="header-row">
+        <h1>Nampetch Sutheesuntornkul</h1>
+        <a class="lang-toggle" href="index.html">TH</a>
+      </div>
       <p class="bio">
         I'm interested in cyber security — learning by building security tools,
         from heuristic detection to ML classifiers, plus the general software engineering foundations used to build them.
       </p>
     </header>
+
+    <div class="section-break"></div>
 
     <div id="projects" class="services">
 
@@ -277,6 +284,8 @@
       </a>
 
     </div>
+
+    <div class="section-break"></div>
 
     <p id="contact" class="section-label">Contact</p>
     <div class="contact-row">

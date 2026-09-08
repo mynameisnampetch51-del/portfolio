@@ -73,7 +73,7 @@
   .page-nav {
     display: flex;
     gap: 16px;
-    margin-top: 12px;
+    margin-bottom: 20px;
     font-family: "IBM Plex Mono", monospace;
     font-size: 12px;
   }
@@ -105,7 +105,12 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-dim);
-    margin: 56px 0 4px;
+    margin: 0 0 4px;
+  }
+
+  .section-break {
+    border-top: 2px solid var(--line-strong);
+    margin: 44px 0;
   }
 
   .services {
@@ -206,21 +211,23 @@
 <body>
   <div class="page">
     <header id="about">
-      <div class="header-row">
-        <h1>Nampetch Sutheesuntornkul</h1>
-        <a class="lang-toggle" href="en.html">EN</a>
-      </div>
       <nav class="page-nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="header-row">
+        <h1>Nampetch Sutheesuntornkul</h1>
+        <a class="lang-toggle" href="en.html">EN</a>
+      </div>
       <p class="bio">
         <strong>Cybersecurity</strong> คือสิ่งที่สนใจและอยากเรียนรู้ให้ลึกขึ้น จึงเลือกเรียนรู้ผ่านการลงมือสร้าง
         ทั้งระบบ <strong>Heuristic Detection</strong>, <strong>Machine Learning Classifier</strong>
         และซอฟต์แวร์ที่นำความรู้ด้าน <strong>Software Engineering</strong> มาประยุกต์ใช้
       </p>
     </header>
+
+    <div class="section-break"></div>
 
     <div id="projects" class="services">
 
@@ -281,6 +288,8 @@
       </a>
 
     </div>
+
+    <div class="section-break"></div>
 
     <p id="contact" class="section-label">Contact</p>
     <div class="contact-row">
