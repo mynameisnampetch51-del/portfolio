@@ -20,6 +20,10 @@
 
   * { box-sizing: border-box; }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     min-height: 100vh;
@@ -64,6 +68,23 @@
   .lang-toggle:hover {
     color: var(--ink);
     border-color: var(--ink-dim);
+  }
+
+  .page-nav {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+  }
+
+  .page-nav a {
+    color: var(--ink-dim);
+    text-decoration: none;
+  }
+
+  .page-nav a:hover {
+    color: var(--signal);
   }
 
   .bio {
@@ -179,16 +200,23 @@
 </head>
 <body>
   <div class="page">
-    <div class="header-row">
-      <h1>Nampetch Sutheesuntornkul</h1>
-      <a class="lang-toggle" href="index.html">TH</a>
-    </div>
-    <p class="bio">
-      I'm interested in cyber security — learning by building security tools,
-      from heuristic detection to ML classifiers, plus the general software engineering foundations used to build them.
-    </p>
+    <header id="about">
+      <div class="header-row">
+        <h1>Nampetch Sutheesuntornkul</h1>
+        <a class="lang-toggle" href="index.html">TH</a>
+      </div>
+      <nav class="page-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="bio">
+        I'm interested in cyber security — learning by building security tools,
+        from heuristic detection to ML classifiers, plus the general software engineering foundations used to build them.
+      </p>
+    </header>
 
-    <div class="services">
+    <div id="projects" class="services">
 
       <a class="service-row" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank">
         <div class="service-top">
@@ -250,7 +278,7 @@
 
     </div>
 
-    <p class="section-label">Contact</p>
+    <p id="contact" class="section-label">Contact</p>
     <div class="contact-row">
       <a href="mailto:mynameisnampetch51@gmail.com">mynameisnampetch51@gmail.com</a>
       <p class="service-name">0800100021</p>
