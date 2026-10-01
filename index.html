@@ -7,206 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #EFEEE7;
-    --line: #D6D3C7;
-    --line-strong: #1B1912;
-    --ink: #202935;
-    --ink-dim: #647489;
-    --signal: #3F8358;
-    --signal-soft: rgba(63, 131, 88, 0.14);
-  }
-
-  * { box-sizing: border-box; }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "IBM Plex Sans Thai", sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .page {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 56px 20px 72px;
-  }
-
-  .header-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
-  h1 {
-    font-family: "Roboto Slab", serif;
-    font-weight: 700;
-    font-size: 30px;
-    margin: 0;
-  }
-
-  .lang-toggle {
-    flex-shrink: 0;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    color: var(--ink-dim);
-    text-decoration: none;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 4px 10px;
-  }
-
-  .lang-toggle:hover {
-    color: var(--ink);
-    border-color: var(--ink-dim);
-  }
-
-  .page-nav {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-  }
-
-  .page-nav a {
-    color: var(--ink-dim);
-    text-decoration: none;
-  }
-
-  .page-nav a:hover {
-    color: var(--signal);
-  }
-
-  .bio {
-    margin: 14px 0 0;
-    color: var(--ink-dim);
-    line-height: 1.75;
-    max-width: 54ch;
-  }
-
-  .bio strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
-
-  .section-label {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-dim);
-    margin: 0 0 4px;
-  }
-
-  .section-break {
-    border-top: 2px solid var(--line-strong);
-    margin: 44px 0;
-  }
-
-  .services {
-    margin: 0;
-  }
-
-  .service-row {
-    display: block;
-    padding: 22px 2px;
-    border-top: 1px solid var(--line);
-    text-decoration: none;
-    color: inherit;
-    transition: background-color 0.15s ease;
-  }
-
-  .service-row:last-child {
-    border-bottom: 1px solid var(--line);
-  }
-
-  .service-row:hover {
-    background: rgba(27, 25, 18, 0.03);
-  }
-
-  .service-top {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px 10px;
-  }
-
-  .status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--signal);
-    box-shadow: 0 0 0 3px var(--signal-soft);
-    flex-shrink: 0;
-  }
-
-  .status-label {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--signal);
-  }
-
-  .service-name {
-    font-family: "Roboto Slab", serif;
-    font-weight: 700;
-    font-size: 18px;
-  }
-
-  .service-desc {
-    margin: 10px 0 0;
-    color: var(--ink-dim);
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .service-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    color: var(--signal);
-  }
-
-  .service-row:hover .service-link {
-    text-decoration: underline;
-  }
-
-  .contact-row {
-    padding: 22px 2px;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .contact-row a {
-    font-family: "Roboto Slab", serif;
-    font-weight: 700;
-    font-size: 17px;
-    color: var(--ink);
-    text-decoration: none;
-  }
-
-  .contact-row a:hover {
-    color: var(--signal);
-  }
-
-  a:focus-visible,
-  button:focus-visible {
-    outline: 2px solid var(--signal);
-    outline-offset: 2px;
-  }
-</style>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <div class="page">
@@ -214,11 +15,12 @@
       <nav class="page-nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#training">Training</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-row">
         <h1>Nampetch Sutheesuntornkul</h1>
-        <a class="lang-toggle" href="project-en.html">EN</a>
+        <a class="lang-toggle" href="en.html">EN</a>
       </div>
       <p class="bio">
         <strong>Cybersecurity</strong> คือสิ่งที่สนใจและอยากเรียนรู้ให้ลึกขึ้น จึงเลือกเรียนรู้ผ่านการลงมือสร้าง
@@ -227,7 +29,9 @@
       </p>
     </header>
 
+    <div class="section-break"></div>
 
+    <p class="section-label">Projects</p>
     <div id="projects" class="services">
 
       <a class="service-row" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank">
@@ -285,6 +89,36 @@
         </p>
         <span class="service-link">view project →</span>
       </a>
+
+    </div>
+
+    <div class="section-break"></div>
+
+    <p id="training" class="section-label">การอบรม</p>
+    <div class="services">
+
+      <a class="service-row" href="assets/certificates/obec-ai-spark-camp-2026.png" target="_blank">
+        <div class="service-top">
+          <span class="service-name">OBEC AI Spark Camp &amp; Hackathon</span>
+        </div>
+        <p class="service-desc">
+          ค่ายอบรมและแข่งขันพัฒนานวัตกรรม AI สำหรับนักเรียน ภายใต้โครงการสร้างสรรค์ ปัญญาประดิษฐ์
+          ปลุกจิตคิดเรียนรู้ (Artificial Intelligence Spark Thailand) จัดโดยสำนักงานคณะกรรมการ
+          การศึกษาขั้นพื้นฐาน (OBEC) — 24–26 มิถุนายน 2569 รวม 18 ชั่วโมง
+        </p>
+        <span class="service-link">ดูใบประกาศนียบัตร →</span>
+      </a>
+
+      <div class="service-row">
+        <div class="service-top">
+          <span class="service-name">NCSA Boot Camp</span>
+        </div>
+        <p class="service-desc">
+          ผ่านการอบรม NCSA CTF Boot Camp และเวิร์กชอปแนะแนวสายอาชีพด้านไซเบอร์ซีเคียวริตี้
+          วันที่ 25–26 เมษายน 2569 จัดโดยสำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ
+          (NCSA/THNCA) ครอบคลุมเนื้อหาด้าน web, cryptography และ network security
+        </p>
+      </div>
 
     </div>
 
