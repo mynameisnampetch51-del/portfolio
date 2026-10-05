@@ -6,21 +6,26 @@
 <title>Nampetch Sutheesuntornkul</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <div class="page">
     <header id="about">
       <nav class="page-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#training">Training</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-row">
-        <h1>Nampetch Sutheesuntornkul</h1>
+        <div class="nav-links">
+          <a href="#about">about</a>
+          <a href="#projects">projects</a>
+          <a href="#training">training</a>
+          <a href="#contact">contact</a>
+        </div>
         <a class="lang-toggle" href="index.html">TH</a>
+      </nav>
+      <h1>Nampetch Sutheesuntornkul<span class="cursor">_</span></h1>
+      <div class="tag-row">
+        <span class="tag">STATUS: ACTIVE</span>
+        <span class="tag">FOCUS: CYBERSECURITY</span>
+        <span class="tag dim">NAKHON PATHOM, TH</span>
       </div>
       <p class="bio">
         <strong>Cybersecurity</strong> is what I want to understand more deeply, so I learn by building —
@@ -32,64 +37,67 @@
     <div class="section-break"></div>
 
     <p class="section-label">Projects</p>
-    <div id="projects" class="services">
+    <div id="projects" class="cards">
 
-      <a class="service-row" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank">
-        <div class="service-top">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span class="status-label">Active</span>
-          <span class="service-name">Phishing URL Detector</span>
+      <a class="card" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank">
+        <div class="card-title">Phishing URL Detector</div>
+        <div class="tag-row">
+          <span class="tag">ACTIVE</span>
+          <span class="tag dim">HEURISTIC + ML</span>
+          <span class="tag dim">BACKEND API</span>
         </div>
-        <p class="service-desc">
+        <p class="card-desc">
           Multi-layer suspicious link checker, modeled on real systems like Google Safe Browsing:
           8 heuristic rules run entirely in the browser (IP-as-hostname, typosquatting, URL
           shorteners, etc.), backed by an ML classifier (logistic regression trained on the UCI
           PhiUSIIL dataset, 235,795 URLs) via a backend API that fetches and inspects the real
           page content.
         </p>
-        <span class="service-link">view project →</span>
+        <span class="card-link">view project →</span>
       </a>
 
-      <a class="service-row" href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank">
-        <div class="service-top">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span class="status-label">Active</span>
-          <span class="service-name">Password Strength Checker</span>
+      <a class="card" href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank">
+        <div class="card-title">Password Strength Checker</div>
+        <div class="tag-row">
+          <span class="tag">ACTIVE</span>
+          <span class="tag dim">CLIENT-SIDE</span>
+          <span class="tag dim">ENTROPY</span>
         </div>
-        <p class="service-desc">
+        <p class="card-desc">
           Measures an existing password's strength on a needle gauge — scored from real entropy,
           not just length. Flags easy-to-guess patterns (common passwords, repeated or sequential
           characters, keyboard patterns). Runs entirely in the browser; the password never leaves it.
         </p>
-        <span class="service-link">view project →</span>
+        <span class="card-link">view project →</span>
       </a>
 
-      <a class="service-row" href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank">
-        <div class="service-top">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span class="status-label">Active</span>
-          <span class="service-name">Password Generator</span>
+      <a class="card" href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank">
+        <div class="card-title">Password Generator</div>
+        <div class="tag-row">
+          <span class="tag">ACTIVE</span>
+          <span class="tag dim">CLIENT-SIDE</span>
+          <span class="tag dim">CSPRNG</span>
         </div>
-        <p class="service-desc">
+        <p class="card-desc">
           Generates new passwords with crypto.getRandomValues (not Math.random), using rejection
           sampling to avoid bias. Pick your own length and character set — each character reveals
           one at a time so you can see it's genuinely randomized, not a canned template. Linked to
           Password Strength Checker via the top bar.
         </p>
-        <span class="service-link">view project →</span>
+        <span class="card-link">view project →</span>
       </a>
 
-      <a class="service-row" href="https://mynameisnampetch51-del.github.io/cube/" target="_blank">
-        <div class="service-top">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span class="status-label">Active</span>
-          <span class="service-name">Cube Net Visualizer</span>
+      <a class="card" href="https://mynameisnampetch51-del.github.io/cube/" target="_blank">
+        <div class="card-title">Cube Net Visualizer</div>
+        <div class="tag-row">
+          <span class="tag">ACTIVE</span>
+          <span class="tag dim">CSS 3D</span>
         </div>
-        <p class="service-desc">
+        <p class="card-desc">
           An interactive tool that teaches cube nets — lay out a pattern, draw on it, then watch
           it fold into a 3D cube using pure CSS 3D transforms, no WebGL or Three.js.
         </p>
-        <span class="service-link">view project →</span>
+        <span class="card-link">view project →</span>
       </a>
 
     </div>
@@ -97,84 +105,92 @@
     <div class="section-break"></div>
 
     <p id="training" class="section-label">Training</p>
-    <div class="services">
+    <div class="log">
 
-      <a class="service-row" href="assets/certificates/international-drone-coding-competition-2024.jpg" target="_blank">
-        <div class="service-top">
-          <span class="service-name">2nd Place — International Drone Coding Competition 2024</span>
+      <a class="log-row" href="assets/certificates/international-drone-coding-competition-2024.jpg" target="_blank">
+        <div class="log-top">
+          <span class="tag dim">2024-11-23</span>
+          <span class="tag">2ND PLACE</span>
+          <span class="log-title">International Drone Coding Competition 2024</span>
         </div>
-        <p class="service-desc">
+        <p class="log-desc">
           Competed in an international drone-programming competition in Hanoi, Vietnam. Hit several
           unexpected problems mid-competition, but worked with the team to debug through them and
-          reach the final round — placed 1st runner-up. November 23–24, 2024.
+          reach the final round — placed 1st runner-up.
         </p>
-        <span class="service-link">view certificate →</span>
+        <span class="log-link">view certificate →</span>
       </a>
 
-      <a class="service-row" href="assets/certificates/innovative-drone-coding-program.jpg" target="_blank">
-        <div class="service-top">
-          <span class="service-name">Innovative Drone Coding Program</span>
+      <a class="log-row" href="assets/certificates/innovative-drone-coding-program.jpg" target="_blank">
+        <div class="log-top">
+          <span class="tag dim">2025-01-18</span>
+          <span class="log-title">Innovative Drone Coding Program</span>
         </div>
-        <p class="service-desc">
+        <p class="log-desc">
           Attended a learning and invention program, "Innovative Drone Coding Program," run by
           Thailand's National Research Council (NRCT) at the Center for Invention Development for
-          the Future and Sustainability — January 18, 2025.
+          the Future and Sustainability.
         </p>
-        <span class="service-link">view certificate →</span>
+        <span class="log-link">view certificate →</span>
       </a>
 
-      <a class="service-row" href="assets/certificates/road-to-ai-cybersecurity-2025.jpg" target="_blank">
-        <div class="service-top">
-          <span class="service-name">Road to AI Cybersecurity 2025</span>
+      <a class="log-row" href="assets/certificates/road-to-ai-cybersecurity-2025.jpg" target="_blank">
+        <div class="log-top">
+          <span class="tag dim">2025-08-01</span>
+          <span class="tag">RANK 20</span>
+          <span class="log-title">Road to AI Cybersecurity 2025</span>
         </div>
-        <p class="service-desc">
+        <p class="log-desc">
           Competed in Road to AI Cybersecurity 2025 (Beginner round) at the K-Engineering World Tour
-          and Workshop 2025, King Mongkut's Institute of Technology Ladkrabang (KMITL) — ranked 20th,
-          August 1, 2025.
+          and Workshop 2025, King Mongkut's Institute of Technology Ladkrabang (KMITL).
         </p>
-        <span class="service-link">view certificate →</span>
+        <span class="log-link">view certificate →</span>
       </a>
 
-      <a class="service-row" href="assets/certificates/basic-cybersecurity-ncsa.jpg" target="_blank">
-        <div class="service-top">
-          <span class="service-name">Basic Cybersecurity (NCSA MOOC)</span>
+      <a class="log-row" href="assets/certificates/basic-cybersecurity-ncsa.jpg" target="_blank">
+        <div class="log-top">
+          <span class="tag dim">2026-04-10</span>
+          <span class="log-title">Basic Cybersecurity (NCSA MOOC)</span>
         </div>
-        <p class="service-desc">
+        <p class="log-desc">
           Completed the "Basic Cybersecurity" online course on the MOOC platform run by Thailand's
-          National Cyber Security Agency (NCSA) — certificate issued April 10, 2026.
+          National Cyber Security Agency (NCSA).
         </p>
-        <span class="service-link">view certificate →</span>
+        <span class="log-link">view certificate →</span>
       </a>
 
-      <a class="service-row" href="assets/certificates/obec-ai-spark-camp-2026.png" target="_blank">
-        <div class="service-top">
-          <span class="service-name">OBEC AI Spark Camp &amp; Hackathon</span>
+      <a class="log-row" href="assets/certificates/obec-ai-spark-camp-2026.png" target="_blank">
+        <div class="log-top">
+          <span class="tag dim">2026-06-24/26</span>
+          <span class="log-title">OBEC AI Spark Camp &amp; Hackathon</span>
         </div>
-        <p class="service-desc">
+        <p class="log-desc">
           A student AI innovation camp and competition under Thailand's "Artificial Intelligence
-          Spark Thailand" program, run by the Office of the Basic Education Commission (OBEC) —
-          June 24–26, 2026, 18 hours total.
+          Spark Thailand" program, run by the Office of the Basic Education Commission (OBEC),
+          18 hours total.
         </p>
-        <span class="service-link">view certificate →</span>
+        <span class="log-link">view certificate →</span>
       </a>
 
-      <a class="service-row" href="assets/certificates/ncsa-boot-camp.jpg" target="_blank">
-        <div class="service-top">
-          <span class="service-name">NCSA Boot Camp</span>
+      <a class="log-row" href="assets/certificates/ncsa-boot-camp.jpg" target="_blank">
+        <div class="log-top">
+          <span class="tag dim">2026-04-25/26</span>
+          <span class="log-title">NCSA Boot Camp</span>
         </div>
-        <p class="service-desc">
-          Completed the NCSA CTF Boot Camp and a cybersecurity career workshop, April 25–26, 2026,
-          run by Thailand's National Cyber Security Agency (NCSA/THNCA) — covering web, cryptography,
-          and network security.
+        <p class="log-desc">
+          Completed the NCSA CTF Boot Camp and a cybersecurity career workshop, run by Thailand's
+          National Cyber Security Agency (NCSA/THNCA) — covering web, cryptography, and
+          network security.
         </p>
-        <span class="service-link">view certificate →</span>
+        <span class="log-link">view certificate →</span>
       </a>
 
-      <div class="service-row">
-        <div class="service-top">
-          <span class="service-name">AI TARO TO SCHOOL 2026</span>
+      <div class="log-row">
+        <div class="log-top">
+          <span class="tag dim">3 DAYS</span>
+          <span class="log-title">AI TARO TO SCHOOL 2026</span>
         </div>
-        <p class="service-desc">
+        <p class="log-desc">
           Attended "AI-Era Career Prep, Keeping Up with Technology," a 3-day program at
           Kanchanabhisek Wittayalai Nakhon Pathom (Phra Tamnak Suan Kularb).
         </p>
@@ -185,9 +201,15 @@
     <div class="section-break"></div>
 
     <p id="contact" class="section-label">Contact</p>
-    <div class="contact-row">
-      <a href="mailto:mynameisnampetch51@gmail.com">mynameisnampetch51@gmail.com</a>
-      <p class="service-name">0800100021</p>
+    <div>
+      <div class="field-row">
+        <span class="field-label">Email</span>
+        <a class="field-value" href="mailto:mynameisnampetch51@gmail.com">mynameisnampetch51@gmail.com</a>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Phone</span>
+        <span class="field-value">0800100021</span>
+      </div>
     </div>
   </div>
 </body>
