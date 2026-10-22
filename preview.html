@@ -50,12 +50,6 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background-color: var(--paper);
-  background-image:
-    linear-gradient(var(--grid-major) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
-    linear-gradient(var(--grid-minor) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
-  background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
   color: var(--ink);
   font-family: var(--body);
   font-size: 15px;
@@ -75,7 +69,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-
   max-width: 820px;
   margin: 0 auto;
   border: 1px solid var(--ink);
-  background: color-mix(in srgb, var(--paper) 55%, transparent);
+  background: var(--paper-2);
   padding: 0;
   position: relative;
 }
@@ -222,7 +216,7 @@ h1 .sur { display: block; font-weight: 500; font-size: 0.56em; color: var(--ink-
 /* ---------- title block ---------- */
 .tb {
   margin-top: 40px; border-top: 1px solid var(--ink);
-  display: grid; grid-template-columns: 1.6fr 1.4fr 1fr 0.7fr 0.8fr;
+  display: grid; grid-template-columns: 1.5fr 1.5fr 1.3fr 1fr 0.6fr 0.7fr;
   font-family: var(--mono); font-size: 12px;
 }
 .tb > div { padding: 8px clamp(10px, 2vw, 16px) 10px; border-right: 1px solid var(--ink); min-width: 0; overflow-wrap: anywhere; }
@@ -371,6 +365,7 @@ h1 .sur { display: block; font-weight: 500; font-size: 0.56em; color: var(--ink-
     <div><span class="k">ชื่อ</span><span class="v">Nampetch Sutheesuntornkul</span></div>
     <div><span class="k">EMAIL</span><span class="v" id="email">mynameisnampetch51@gmail.com</span><button class="copy" type="button" data-copy="email">คัดลอก</button></div>
     <div><span class="k">โทร</span><span class="v" id="phone">080 010 0021</span><button class="copy" type="button" data-copy="phone">คัดลอก</button></div>
+    <div><span class="k">GITHUB</span><a class="v" href="https://github.com/mynameisnampetch51-del" target="_blank" rel="noopener">mynameisnampetch51-del</a></div>
     <div><span class="k">SHEET</span><span class="v">1 / 1</span></div>
     <div><span class="k">REV</span><span class="v">2569.10</span></div>
   </footer>
