@@ -6,208 +6,168 @@
 <title>Nampetch Sutheesuntornkul</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Anuphan:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <div class="page">
-    <header id="about">
-      <nav class="page-nav">
-        <div class="nav-links">
-          <a href="#about">about</a>
-          <a href="#projects">projects</a>
-          <a href="#training">training</a>
-          <a href="#contact">contact</a>
-        </div>
-        <a class="lang-toggle" href="en.html">EN</a>
-      </nav>
-      <h1>Nampetch Sutheesuntornkul<span class="cursor">_</span></h1>
-      <div class="tag-row">
-        <span class="tag">STATUS: ACTIVE</span>
-        <span class="tag">FOCUS: CYBERSECURITY</span>
-        <span class="tag dim">NAKHON PATHOM, TH</span>
+
+<div class="sheet">
+  <div class="strip">
+    <nav aria-label="หัวข้อ">
+      <a href="#projects">โปรเจค</a>
+      <a href="#training">การอบรม</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+    <a class="lang" href="en.html">EN</a>
+  </div>
+
+  <div class="inner">
+    <header class="hero" id="about">
+      <div class="hero-text">
+        <p class="eyebrow"><span>นักเรียน ม.ปลาย</span><span>นครปฐม</span><span>สนใจ Cybersecurity</span></p>
+        <h1>Nampetch <span class="sur">Sutheesuntornkul</span></h1>
+        <p class="bio">
+          <strong>Cybersecurity</strong> คือสิ่งที่สนใจและอยากเรียนรู้ให้ลึกขึ้น จึงเลือกเรียนรู้ผ่านการลงมือสร้าง
+          ทั้งระบบ <strong>Heuristic Detection</strong>, <strong>Machine Learning Classifier</strong>
+          และซอฟต์แวร์ที่นำความรู้ด้าน <strong>Software Engineering</strong> มาประยุกต์ใช้
+        </p>
+        <p class="bio-note">โปรเจค 4 ชิ้น · ใบรับรอง 6 ใบ · รางวัล 1 รายการ</p>
       </div>
-      <p class="bio">
-        <strong>Cybersecurity</strong> คือสิ่งที่สนใจและอยากเรียนรู้ให้ลึกขึ้น จึงเลือกเรียนรู้ผ่านการลงมือสร้าง
-        ทั้งระบบ <strong>Heuristic Detection</strong>, <strong>Machine Learning Classifier</strong>
-        และซอฟต์แวร์ที่นำความรู้ด้าน <strong>Software Engineering</strong> มาประยุกต์ใช้
-      </p>
+
+      <div class="net-wrap">
+        <button class="net-stage" id="netBtn" type="button" aria-label="เล่นแอนิเมชันพับลูกบาศก์อีกครั้ง">
+          <div class="net anim" id="net">
+            <div class="face up">SEC</div>
+            <div class="face left">ML</div>
+            <div class="face front">NP</div>
+            <div class="face right">WEB</div>
+            <div class="face down">CTF
+              <div class="face back" style="top:100%;left:-1px">DRONE</div>
+            </div>
+          </div>
+        </button>
+        <span class="net-cap">cube net → cube · แตะเพื่อพับใหม่</span>
+      </div>
     </header>
 
-    <div class="section-break"></div>
-
-    <p class="section-label">Projects</p>
-    <div id="projects" class="cards">
-
-      <a class="card" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank">
-        <div class="card-title">Phishing URL Detector</div>
-        <div class="tag-row">
-          <span class="tag">ACTIVE</span>
-          <span class="tag dim">HEURISTIC + ML</span>
-          <span class="tag dim">BACKEND API</span>
-        </div>
-        <p class="card-desc">
-          ตรวจลิงก์ที่น่าสงสัยแบบหลายชั้น เลียนแบบระบบจริงอย่าง Google Safe Browsing:
-          heuristic 8 ข้อรันในเบราว์เซอร์ล้วน (IP-as-hostname, typosquatting, URL shortener ฯลฯ)
-          เสริมด้วย ML classifier (LogisticRegression เทรนจาก UCI PhiUSIIL dataset 235,795 URL)
-          ผ่าน backend API ที่แกะเนื้อหาหน้าเว็บจริงมาเช็ค
-        </p>
-        <span class="card-link">view project →</span>
+    <div class="dim" id="projects"><h2>โปรเจค</h2><span class="n">4</span></div>
+    <div class="projects">
+      <a class="proj" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank" rel="noopener">
+        <span class="proj-kind">heuristic + ML · backend API</span>
+        <h3>Phishing URL Detector</h3>
+        <p>ตรวจลิงก์ที่น่าสงสัยแบบหลายชั้น: heuristic 8 ข้อรันในเบราว์เซอร์ เสริมด้วย LogisticRegression ที่เทรนจาก UCI PhiUSIIL (235,795 URL) ผ่าน backend ที่แกะเนื้อหาหน้าเว็บจริงมาเช็ค</p>
+        <span class="go">เปิดโปรเจค ↗</span>
       </a>
-
-      <a class="card" href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank">
-        <div class="card-title">Password Strength Checker</div>
-        <div class="tag-row">
-          <span class="tag">ACTIVE</span>
-          <span class="tag dim">CLIENT-SIDE</span>
-          <span class="tag dim">ENTROPY</span>
-        </div>
-        <p class="card-desc">
-          วัดความแข็งแรงของรหัสผ่านที่มีอยู่แล้วบนมาตรวัดเข็ม — ประเมินจาก entropy จริง
-          ไม่ใช่แค่นับความยาว จับรูปแบบที่เดาง่าย (รหัสยอดฮิต, ตัวอักษรซ้ำ/เรียงต่อเนื่อง,
-          คีย์บอร์ดแพทเทิร์น) ทำงานในเบราว์เซอร์ล้วน ไม่ส่งรหัสผ่านไปไหน
-        </p>
-        <span class="card-link">view project →</span>
+      <a class="proj" href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank" rel="noopener">
+        <span class="proj-kind">client-side · entropy</span>
+        <h3>Password Strength Checker</h3>
+        <p>วัดความแข็งแรงของรหัสผ่านจาก entropy จริง ไม่ใช่แค่นับความยาว จับรหัสยอดฮิต ตัวซ้ำ/เรียง และคีย์บอร์ดแพทเทิร์น ทำงานในเบราว์เซอร์ ไม่ส่งรหัสผ่านไปไหน</p>
+        <span class="go">เปิดโปรเจค ↗</span>
       </a>
-
-      <a class="card" href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank">
-        <div class="card-title">Password Generator</div>
-        <div class="tag-row">
-          <span class="tag">ACTIVE</span>
-          <span class="tag dim">CLIENT-SIDE</span>
-          <span class="tag dim">CSPRNG</span>
-        </div>
-        <p class="card-desc">
-          สุ่มรหัสผ่านใหม่ด้วย crypto.getRandomValues (ไม่ใช่ Math.random) พร้อม rejection sampling
-          กัน bias เลือกความยาวและชุดตัวอักษรเองได้ ตัวอักษรทยอยขึ้นทีละตัวให้เห็นชัดว่าแต่ละตัวมาจาก
-          การสุ่มจริง ไม่ใช่ template สำเร็จรูป เชื่อมกับ Password Strength Checker ผ่านแถบลิงก์ด้านบน
-        </p>
-        <span class="card-link">view project →</span>
+      <a class="proj" href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank" rel="noopener">
+        <span class="proj-kind">client-side · CSPRNG</span>
+        <h3>Password Generator</h3>
+        <p>สุ่มรหัสผ่านด้วย crypto.getRandomValues พร้อม rejection sampling กัน bias เลือกความยาวและชุดตัวอักษรได้ ตัวอักษรทยอยขึ้นทีละตัวให้เห็นว่ามาจากการสุ่มจริง</p>
+        <span class="go">เปิดโปรเจค ↗</span>
       </a>
-
-      <a class="card" href="https://mynameisnampetch51-del.github.io/cube/" target="_blank">
-        <div class="card-title">Cube Net Visualizer</div>
-        <div class="tag-row">
-          <span class="tag">ACTIVE</span>
-          <span class="tag dim">CSS 3D</span>
-        </div>
-        <p class="card-desc">
-          เครื่องมือ interactive สอนเรื่องโครงข่ายลูกบาศก์ (cube net) — วางแปลน วาดลาย
-          แล้วดูมันพับเป็นลูกบาศก์ 3 มิติด้วย CSS 3D transform ล้วน ไม่ใช้ WebGL/Three.js
-        </p>
-        <span class="card-link">view project →</span>
+      <a class="proj" href="https://mynameisnampetch51-del.github.io/cube/" target="_blank" rel="noopener">
+        <span class="proj-kind">CSS 3D · ไม่ใช้ WebGL</span>
+        <h3>Cube Net Visualizer</h3>
+        <p>เครื่องมือสอนเรื่องโครงข่ายลูกบาศก์ วางแปลน วาดลาย แล้วดูมันพับเป็นลูกบาศก์ 3 มิติด้วย CSS 3D transform ล้วน (ลูกบาศก์ด้านบนของหน้านี้ใช้เทคนิคเดียวกัน)</p>
+        <span class="go">เปิดโปรเจค ↗</span>
       </a>
-
     </div>
 
-    <div class="section-break"></div>
-
-    <p id="training" class="section-label">การอบรม</p>
-    <div class="log">
-
-      <a class="log-row" href="assets/certificates/international-drone-coding-competition-2024.jpg" target="_blank">
-        <div class="log-top">
-          <span class="tag dim">23–24 พ.ย. 2567</span>
-          <span class="tag">2ND PLACE</span>
-          <span class="log-title">International Drone Coding Competition 2024</span>
-        </div>
-        <p class="log-desc">
-          แข่งขันเขียนโปรแกรมควบคุมโดรนระดับนานาชาติที่เมืองฮานอย ประเทศเวียดนาม เจอปัญหาเฉพาะหน้า
-          หลายครั้งระหว่างการแข่งขัน แต่ร่วมกับทีมวิเคราะห์และแก้ไขจนผ่านรอบสุดท้ายได้ คว้ารางวัล
-          รองชนะเลิศอันดับ 1
-        </p>
-        <span class="log-link">ดูใบประกาศนียบัตร →</span>
-      </a>
-
-      <a class="log-row" href="assets/certificates/innovative-drone-coding-program.jpg" target="_blank">
-        <div class="log-top">
-          <span class="tag dim">18 ม.ค. 2568</span>
-          <span class="log-title">Innovative Drone Coding Program</span>
-        </div>
-        <p class="log-desc">
-          เข้าร่วมค่ายอบรมเสริมสร้างการเรียนรู้และประดิษฐกรรม หัวข้อ "Innovative Drone Coding Program"
-          จัดโดยสำนักงานการวิจัยแห่งชาติ (วช.) ณ ศูนย์พัฒนาสิ่งประดิษฐ์เพื่ออนาคตและความยั่งยืน
-        </p>
-        <span class="log-link">ดูใบประกาศนียบัตร →</span>
-      </a>
-
-      <a class="log-row" href="assets/certificates/road-to-ai-cybersecurity-2025.jpg" target="_blank">
-        <div class="log-top">
-          <span class="tag dim">1 ส.ค. 2568</span>
-          <span class="tag">RANK 20</span>
-          <span class="log-title">Road to AI Cybersecurity 2025</span>
-        </div>
-        <p class="log-desc">
-          เข้าร่วมแข่งขัน Road to AI Cybersecurity 2025 (รอบ Beginner) ในงาน K-Engineering World Tour
-          and Workshop 2025 ที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)
-        </p>
-        <span class="log-link">ดูใบประกาศนียบัตร →</span>
-      </a>
-
-      <a class="log-row" href="assets/certificates/basic-cybersecurity-ncsa.jpg" target="_blank">
-        <div class="log-top">
-          <span class="tag dim">10 เม.ย. 2569</span>
-          <span class="log-title">Basic Cybersecurity (NCSA MOOC)</span>
-        </div>
-        <p class="log-desc">
-          เรียนจบคอร์สออนไลน์ "Basic Cybersecurity" บนแพลตฟอร์ม MOOC ของสำนักงานคณะกรรมการ
-          การรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ (NCSA)
-        </p>
-        <span class="log-link">ดูใบประกาศนียบัตร →</span>
-      </a>
-
-      <a class="log-row" href="assets/certificates/obec-ai-spark-camp-2026.png" target="_blank">
-        <div class="log-top">
-          <span class="tag dim">24–26 มิ.ย. 2569</span>
-          <span class="log-title">OBEC AI Spark Camp &amp; Hackathon</span>
-        </div>
-        <p class="log-desc">
-          ค่ายอบรมและแข่งขันพัฒนานวัตกรรม AI สำหรับนักเรียน ภายใต้โครงการสร้างสรรค์ ปัญญาประดิษฐ์
-          ปลุกจิตคิดเรียนรู้ (Artificial Intelligence Spark Thailand) จัดโดยสำนักงานคณะกรรมการ
-          การศึกษาขั้นพื้นฐาน (OBEC) รวม 18 ชั่วโมง
-        </p>
-        <span class="log-link">ดูใบประกาศนียบัตร →</span>
-      </a>
-
-      <a class="log-row" href="assets/certificates/ncsa-boot-camp.jpg" target="_blank">
-        <div class="log-top">
-          <span class="tag dim">25–26 เม.ย. 2569</span>
-          <span class="log-title">NCSA Boot Camp</span>
-        </div>
-        <p class="log-desc">
-          ผ่านการอบรม NCSA CTF Boot Camp และเวิร์กชอปแนะแนวสายอาชีพด้านไซเบอร์ซีเคียวริตี้
-          จัดโดยสำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ (NCSA/THNCA)
-          ครอบคลุมเนื้อหาด้าน web, cryptography และ network security
-        </p>
-        <span class="log-link">ดูใบประกาศนียบัตร →</span>
-      </a>
-
-      <div class="log-row">
-        <div class="log-top">
-          <span class="tag dim">3 DAYS</span>
-          <span class="log-title">AI TARO TO SCHOOL 2026</span>
-        </div>
-        <p class="log-desc">
-          เข้าร่วมกิจกรรม "ส่งเสริมอาชีพยุค AI ก้าวทันเทคโนโลยี" ที่โรงเรียนกาญจนาภิเษกวิทยาลัย
-          นครปฐม (พระตำหนักสวนกุหลาบมัธยม)
-        </p>
+    <div class="dim" id="training"><h2>การอบรมและแข่งขัน</h2><span class="n">2567 – 2569</span></div>
+    <div class="tl">
+      <div class="when">23–24 พ.ย. 2567</div>
+      <div class="what">
+        <h3>International Drone Coding Competition 2024 <span class="stamp">2ND PLACE</span></h3>
+        <p>แข่งขันเขียนโปรแกรมควบคุมโดรนระดับนานาชาติที่เมืองฮานอย ประเทศเวียดนาม เจอปัญหาเฉพาะหน้าหลายครั้งระหว่างการแข่งขัน แต่ร่วมกับทีมวิเคราะห์และแก้ไขจนผ่านรอบสุดท้ายได้ คว้ารางวัลรองชนะเลิศอันดับ 1</p>
+        <a class="cert" href="assets/certificates/international-drone-coding-competition-2024.jpg" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
       </div>
 
-    </div>
-
-    <div class="section-break"></div>
-
-    <p id="contact" class="section-label">Contact</p>
-    <div>
-      <div class="field-row">
-        <span class="field-label">Email</span>
-        <a class="field-value" href="mailto:mynameisnampetch51@gmail.com">mynameisnampetch51@gmail.com</a>
+      <div class="when">18 ม.ค. 2568</div>
+      <div class="what">
+        <h3>Innovative Drone Coding Program</h3>
+        <p>ค่ายอบรมเสริมสร้างการเรียนรู้และประดิษฐกรรม จัดโดยสำนักงานการวิจัยแห่งชาติ (วช.) ณ ศูนย์พัฒนาสิ่งประดิษฐ์เพื่ออนาคตและความยั่งยืน</p>
+        <a class="cert" href="assets/certificates/innovative-drone-coding-program.jpg" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
       </div>
-      <div class="field-row">
-        <span class="field-label">Phone</span>
-        <span class="field-value">0800100021</span>
+
+      <div class="when">1 ส.ค. 2568</div>
+      <div class="what">
+        <h3>Road to AI Cybersecurity 2025 <span class="stamp">RANK 20</span></h3>
+        <p>แข่งขันรอบ Beginner ในงาน K-Engineering World Tour and Workshop 2025 ที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)</p>
+        <a class="cert" href="assets/certificates/road-to-ai-cybersecurity-2025.jpg" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
+      </div>
+
+      <div class="when">10 เม.ย. 2569</div>
+      <div class="what">
+        <h3>Basic Cybersecurity (NCSA MOOC)</h3>
+        <p>เรียนจบคอร์สออนไลน์ "Basic Cybersecurity" บนแพลตฟอร์ม MOOC ของสำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ (NCSA)</p>
+        <a class="cert" href="assets/certificates/basic-cybersecurity-ncsa.jpg" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
+      </div>
+
+      <div class="when">25–26 เม.ย. 2569</div>
+      <div class="what">
+        <h3>NCSA CTF Boot Camp</h3>
+        <p>อบรม CTF Boot Camp และเวิร์กชอปแนะแนวสายอาชีพด้านไซเบอร์ซีเคียวริตี้ จัดโดย NCSA/THNCA ครอบคลุม web, cryptography และ network security</p>
+        <a class="cert" href="assets/certificates/ncsa-boot-camp.jpg" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
+      </div>
+
+      <div class="when">24–26 มิ.ย. 2569</div>
+      <div class="what">
+        <h3>OBEC AI Spark Camp &amp; Hackathon</h3>
+        <p>ค่ายอบรมและแข่งขันพัฒนานวัตกรรม AI สำหรับนักเรียน ภายใต้โครงการ Artificial Intelligence Spark Thailand จัดโดยสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน (OBEC) รวม 18 ชั่วโมง</p>
+        <a class="cert" href="assets/certificates/obec-ai-spark-camp-2026.png" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
+      </div>
+
+      <div class="when">2569 · 3 วัน</div>
+      <div class="what">
+        <h3>AI TARO TO SCHOOL 2026</h3>
+        <p>กิจกรรม "ส่งเสริมอาชีพยุค AI ก้าวทันเทคโนโลยี" ที่โรงเรียนกาญจนาภิเษกวิทยาลัย นครปฐม (พระตำหนักสวนกุหลาบมัธยม)</p>
       </div>
     </div>
   </div>
+
+  <footer class="tb" id="contact">
+    <div><span class="k">ชื่อ</span><span class="v">Nampetch Sutheesuntornkul</span></div>
+    <div><span class="k">EMAIL</span><span class="v" id="email">mynameisnampetch51@gmail.com</span><button class="copy" type="button" data-copy="email">คัดลอก</button></div>
+    <div><span class="k">โทร</span><span class="v" id="phone">080 010 0021</span><button class="copy" type="button" data-copy="phone">คัดลอก</button></div>
+    <div><span class="k">GITHUB</span><a class="v" href="https://github.com/mynameisnampetch51-del" target="_blank" rel="noopener">mynameisnampetch51-del</a></div>
+    <div><span class="k">SHEET</span><span class="v">1 / 1</span></div>
+    <div><span class="k">REV</span><span class="v">2569.10</span></div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var net = document.getElementById('net');
+  var btn = document.getElementById('netBtn');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { net.classList.remove('anim'); net.classList.add('folded'); }
+  btn.addEventListener('click', function () {
+    if (reduce) { net.classList.toggle('folded'); return; }
+    net.classList.remove('anim', 'folded');
+    void net.offsetWidth; /* restart keyframes */
+    net.classList.add('anim');
+  });
+
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.dataset.copy);
+      var text = el.textContent.replace(/\s+/g, b.dataset.copy === 'phone' ? '' : ' ').trim();
+      var done = function () { b.textContent = 'คัดลอกแล้ว'; setTimeout(function () { b.textContent = 'คัดลอก'; }, 1500); };
+      var fallback = function () {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    });
+  });
+})();
+</script>
 </body>
 </html>
