@@ -16,6 +16,7 @@
     <nav aria-label="หัวข้อ">
       <a href="#projects">โปรเจค</a>
       <a href="#training">การอบรม</a>
+      <a href="#school">โรงเรียน</a>
       <a href="#contact">ติดต่อ</a>
     </nav>
     <a class="lang" href="en.html">EN</a>
@@ -24,14 +25,15 @@
   <div class="inner">
     <header class="hero" id="about">
       <div class="hero-text">
-        <p class="eyebrow"><span>นักเรียน ม.ปลาย</span><span>นครปฐม</span><span>สนใจ Cybersecurity</span></p>
+        <p class="eyebrow"><span>ม.6 แผนวิทย์-คณิต</span><span>กาญจนาภิเษกวิทยาลัย นครปฐม</span><span>สนใจ Cybersecurity</span></p>
         <h1>Nampetch <span class="sur">Sutheesuntornkul</span></h1>
         <p class="bio">
-          <strong>Cybersecurity</strong> คือสิ่งที่สนใจและอยากเรียนรู้ให้ลึกขึ้น จึงเลือกเรียนรู้ผ่านการลงมือสร้าง
+          เริ่มจากช่วยคุณพ่อประกอบคอมพิวเตอร์ แล้วขยับมาเขียนโปรแกรมและ IoT ที่ต้องให้ฮาร์ดแวร์กับซอฟต์แวร์ทำงานร่วมกัน
+          จนสนใจ <strong>Cybersecurity</strong> เป็นพิเศษ จึงเลือกเรียนรู้ผ่านการลงมือสร้าง
           ทั้งระบบ <strong>Heuristic Detection</strong>, <strong>Machine Learning Classifier</strong>
           และซอฟต์แวร์ที่นำความรู้ด้าน <strong>Software Engineering</strong> มาประยุกต์ใช้
         </p>
-        <p class="bio-note">โปรเจค 4 ชิ้น · ใบรับรอง 6 ใบ · รางวัล 1 รายการ</p>
+        <p class="bio-note">โปรเจค 4 ชิ้น · ใบรับรอง 10 ใบ · รางวัล 2 รายการ</p>
       </div>
 
       <div class="net-wrap">
@@ -55,16 +57,16 @@
       <a class="proj" href="https://mynameisnampetch51-del.github.io/phishing-detector/" target="_blank" rel="noopener">
         <span class="proj-kind">heuristic + ML · backend API</span>
         <h3>Phishing URL Detector</h3>
-        <p>ตรวจลิงก์ที่น่าสงสัยแบบหลายชั้น: heuristic 8 ข้อรันในเบราว์เซอร์ เสริมด้วย LogisticRegression ที่เทรนจาก UCI PhiUSIIL (235,795 URL) ผ่าน backend ที่แกะเนื้อหาหน้าเว็บจริงมาเช็ค</p>
+        <p>ตรวจลิงก์ที่น่าสงสัยแบบหลายชั้น: heuristic 8 ข้อรันในเบราว์เซอร์ (จับ typosquatting ด้วย Levenshtein distance ที่เขียนเอง) เสริมด้วย LogisticRegression ที่เทรนจาก UCI PhiUSIIL (235,795 URL) ผ่าน backend ที่แกะเนื้อหาหน้าเว็บจริงมาเช็ค</p>
         <span class="go">เปิดโปรเจค ↗</span>
       </a>
-      <a class="proj" href="https://mynameisnampetch51-del.github.io/password-checker/" target="_blank" rel="noopener">
+      <a class="proj" href="https://password-checker.mynameisnampetch51.workers.dev/" target="_blank" rel="noopener">
         <span class="proj-kind">client-side · entropy</span>
         <h3>Password Strength Checker</h3>
         <p>วัดความแข็งแรงของรหัสผ่านจาก entropy จริง ไม่ใช่แค่นับความยาว จับรหัสยอดฮิต ตัวซ้ำ/เรียง และคีย์บอร์ดแพทเทิร์น ทำงานในเบราว์เซอร์ ไม่ส่งรหัสผ่านไปไหน</p>
         <span class="go">เปิดโปรเจค ↗</span>
       </a>
-      <a class="proj" href="https://mynameisnampetch51-del.github.io/password-checker/generator/" target="_blank" rel="noopener">
+      <a class="proj" href="https://password-checker.mynameisnampetch51.workers.dev/generator/" target="_blank" rel="noopener">
         <span class="proj-kind">client-side · CSPRNG</span>
         <h3>Password Generator</h3>
         <p>สุ่มรหัสผ่านด้วย crypto.getRandomValues พร้อม rejection sampling กัน bias เลือกความยาวและชุดตัวอักษรได้ ตัวอักษรทยอยขึ้นทีละตัวให้เห็นว่ามาจากการสุ่มจริง</p>
@@ -122,10 +124,35 @@
         <a class="cert" href="assets/certificates/obec-ai-spark-camp-2026.png" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
       </div>
 
+      <div class="when">4 ก.ย. 2569</div>
+      <div class="what">
+        <h3>แก้โจทย์ความมั่นคงปลอดภัยไซเบอร์ รอบชิงชนะเลิศ (IT Open House, สจล.) <span class="stamp">RANK 4 / 30</span></h3>
+        <p>แข่งแก้โจทย์ด้านความมั่นคงไซเบอร์ (วิเคราะห์และแก้ปัญหาภายใต้เวลาจำกัด) จัดโดยคณะเทคโนโลยีสารสนเทศ สจล. ในงานลาดกระบังนิทรรศน์ 2569 ได้อันดับ 4 จาก 30 ทีม</p>
+        <a class="cert" href="assets/certificates/kmitl-cyber-challenge-2569.jpg" target="_blank" rel="noopener">ดูใบประกาศนียบัตร ↗</a>
+      </div>
+
       <div class="when">2569 · 3 วัน</div>
       <div class="what">
         <h3>AI TARO TO SCHOOL 2026</h3>
         <p>กิจกรรม "ส่งเสริมอาชีพยุค AI ก้าวทันเทคโนโลยี" ที่โรงเรียนกาญจนาภิเษกวิทยาลัย นครปฐม (พระตำหนักสวนกุหลาบมัธยม)</p>
+      </div>
+    </div>
+
+    <div class="dim" id="school"><h2>บทบาทในโรงเรียน</h2><span class="n">ม.4 – ม.6</span></div>
+    <div class="tl">
+      <div class="when">ม.4 – ม.6</div>
+      <div class="what">
+        <h3>จิตอาสาฝ่ายโสตทัศนศึกษา</h3>
+        <p>ถ่ายภาพ วิดีโอ ดูแลเครื่องเสียง และถ่ายภาพมุมสูงในงานของโรงเรียนต่อเนื่อง 3 ปี มีหนังสือรับรองจากโรงเรียน (9 ก.ย. 2568)</p>
+        <a class="cert" href="assets/certificates/av-team-thai-language-day-2568.jpg" target="_blank" rel="noopener">เกียรติบัตรวันภาษาไทย 2568 ↗</a>
+        <a class="cert" href="assets/certificates/community-service-2569.jpg" target="_blank" rel="noopener">เกียรติบัตรงานสามประสานสัมพันธ์ 2569 ↗</a>
+      </div>
+
+      <div class="when">ปีการศึกษา 2568</div>
+      <div class="what">
+        <h3>กรรมการนักเรียน ฝ่ายโสตทัศน์</h3>
+        <p>ประสานงานกับครูและเพื่อน จัดเตรียมสถานที่ อุปกรณ์ และบันทึกภาพ/วิดีโอในกิจกรรมของโรงเรียนตลอด 1 ปีการศึกษา</p>
+        <a class="cert" href="assets/certificates/farewell-event-staff-2569.jpg" target="_blank" rel="noopener">เกียรติบัตรงานอำลาสถาบัน 2569 ↗</a>
       </div>
     </div>
   </div>

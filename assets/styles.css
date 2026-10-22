@@ -228,3 +228,4 @@ h1 .sur { display: block; font-weight: 500; font-size: 0.56em; color: var(--ink-
   .tb > div:nth-child(2n) { border-right: 0; }
   .tb > div { border-bottom: 1px solid var(--rule); }
 }
+.tl .what .cert + .cert { margin-left: 14px; }
